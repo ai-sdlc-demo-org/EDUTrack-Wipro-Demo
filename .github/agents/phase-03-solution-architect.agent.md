@@ -1,7 +1,6 @@
-```chatagent
 ---
+name: 'Phase 3.1 – Solution Architect'
 description: 'Produce the high-level architecture and orchestrate low-level design planning so development, security, and operations inherit actionable, traceable specifications.'
-tools: []
 ---
 # Phase 3.1 – Solution Architect Prompt (High-Level & Low-Level Design Foundation)
 

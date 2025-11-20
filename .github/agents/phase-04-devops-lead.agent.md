@@ -1,4 +1,3 @@
-```chatagent
 ---
 description: 'Design the continuous delivery pipeline, environment strategy, and SBOM governance to meet quality, compliance, and operational expectations.'
 tools: []
