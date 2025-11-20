@@ -1,7 +1,7 @@
 ---
 author: EDUTrack Project Team
 description: Comprehensive stakeholder register for the EDUTrack Internal AI Learning & Training Platform
-last_changed: 2025-11-19
+last_changed: 2025-11-20
 ---
 
 # Stakeholder Register: EDUTrack Platform
@@ -12,14 +12,15 @@ last_changed: 2025-11-19
 |---------|------|--------|----------|---------|
 | 0.1 | 2025-11-15 | Project Manager | | Draft |
 | 1.0 | 2025-11-19 | Project Manager | Steering Committee | Baseline |
+| 1.1 | 2025-11-20 | Portfolio Manager | Pending | Added artefact approval responsibilities and traceability mapping |
 
 ## Approvals
 
-| Name | Role | Signature | Date |
-|------|------|-----------|------|
-| TBD | Executive Sponsor (CLO) | | |
-| TBD | Project Manager | | |
-| TBD | Change Manager | | |
+| Name | Role | Stakeholder ID | Signature | Date |
+|------|------|----------------|-----------|------|
+| TBD | Portfolio Manager / Project Manager | STK-013 | | |
+| TBD | Executive Sponsor (CLO) | STK-001 | | |
+| TBD | Change Manager | STK-020 | | |
 
 ## 1. Executive Summary
 
@@ -398,7 +399,99 @@ Thank you for your valuable contribution!
 [Content Manager Contact]
 ```
 
-### Appendix D: Glossary
+### Appendix D: Artefact Approval Responsibilities
+
+This section maps stakeholders to specific SDLC artefacts they are responsible for approving or reviewing. Stakeholder IDs are referenced in approval tables within each artefact template (BRD, PRD, SRS, NFR, HLD, LLD, Test Plan, Release Notes, Rollback Plan, etc.).
+
+| Artefact | Accountable (Approver) | Consulted (Reviewers) | Informed | Approval SLA | Template Reference |
+|----------|------------------------|----------------------|----------|--------------|-------------------|
+| **Business Case** | STK-001 (CLO) | STK-002, STK-003, STK-004, STK-012 | STK-013, All stakeholders | 10 business days | `docs/inception/business-case.md` |
+| **Vision & Goals** | STK-001 (CLO) | STK-002, STK-003, STK-012 | All stakeholders | 5 business days | `docs/inception/vision-and-goals.md` |
+| **Stakeholder Register** | STK-013 (PM) | STK-001, STK-012, STK-020 | All stakeholders | 5 business days | `docs/inception/stakeholder-register.md` |
+| **RACI Matrix** | STK-013 (PM) | STK-001, STK-012, STK-014 | All stakeholders | 5 business days | `docs/inception/raci-matrix.md` |
+| **Communication Plan** | STK-020 (Change Mgr) | STK-001, STK-012, STK-013 | All stakeholders | 5 business days | `docs/inception/communication-plan.md` |
+| **Business Requirements (BRD)** | STK-012 (Product Owner) | STK-001, STK-013, STK-014, STK-021 | STK-015, STK-016, Dev team | 5 business days | ` templates/BRD.md` |
+| **Product Requirements (PRD)** | STK-012 (Product Owner) | STK-013, STK-014, STK-021 | Dev team | 3 business days | ` templates/PRD.md` |
+| **System Requirements (SRS)** | STK-014 (Solution Architect) | STK-002, STK-012, STK-015 | Dev team | 3 business days | ` templates/SRS.md` |
+| **Non-Functional Requirements (NFR)** | STK-014 (Solution Architect) | STK-010, STK-016, STK-017 | Dev team | 3 business days | ` templates/NFR.md` |
+| **Requirements Traceability Matrix (RTM)** | STK-013 (PM) | STK-012, STK-014, STK-016 | All stakeholders | 5 business days | ` templates/RTM.md` |
+| **High-Level Design (HLD)** | STK-014 (Solution Architect) | STK-002, STK-010, STK-017 | STK-012, STK-013, Dev team | 5 business days | ` templates/HLD.md` |
+| **Low-Level Design (LLD)** | STK-015 (Dev Lead) | STK-014, STK-016 | Dev team | 3 business days | ` templates/LLD.md` |
+| **Architecture Decision Records (ADR)** | STK-014 (Solution Architect) | STK-002, STK-015, STK-017 | Architecture Review Board | 3 business days | ` templates/ADR.md` |
+| **Threat Model** | STK-010 (CISO) / STK-027 (Security Analyst) | STK-002, STK-006, STK-014 | Security team | 5 business days | ` templates/threat-model.md` |
+| **Data Architecture** | STK-014 (Solution Architect) | STK-002, STK-010, STK-019 | Dev team | 5 business days | ` templates/data-architecture.md` |
+| **API Specifications** | STK-014 (Solution Architect) | STK-015, STK-012 | Dev team | 3 business days | ` templates/api-spec-template.md` |
+| **Test Plan** | STK-016 (QA Lead) | STK-012, STK-014, STK-015 | QA team | 3 business days | ` templates/TestPlan.md` |
+| **Test Data Strategy** | STK-016 (QA Lead) | STK-014, STK-010 | QA team | 3 business days | Related to Test Plan |
+| **User Acceptance Testing (UAT)** | STK-012 (Product Owner) | STK-021, STK-023 | STK-024, STK-025 | 5 business days | Part of Test Plan |
+| **Deployment Runbook** | STK-017 (DevOps Lead) | STK-014, STK-015, STK-016 | Ops team | 2 business days | Internal DevOps docs |
+| **Release Notes** | STK-020 (Change Mgr) | STK-012, STK-013 | All stakeholders | 2 business days | ` templates/ReleaseNotes.md` |
+| **Rollback Plan** | STK-017 (DevOps Lead) | STK-014, STK-015, STK-016 | Ops team, Change Advisory Board | 2 business days | ` templates/RollbackPlan.md` |
+| **Go/No-Go Checklist** | STK-001 (CLO) | STK-012, STK-013, STK-016, STK-017 | Steering Committee | 1 business day | Part of Release process |
+| **Support Handover** | STK-020 (Change Mgr) / STK-029 (IT Support) | STK-012, STK-017, STK-021 | Support team | 3 business days | Internal Support docs |
+| **Coding Standards** | STK-015 (Dev Lead) | STK-014 | Dev team | 3 business days | ` templates/coding-standards.md` |
+| **EPIC** | STK-012 (Product Owner) | STK-013, STK-015 | Dev team | 2 business days | ` templates/EPIC.md` |
+| **Feature** | STK-012 (Product Owner) | STK-015 | Dev team | 1 business day | ` templates/Feature.md` |
+| **Story** | STK-012 (Product Owner) | STK-015 | Dev team | 1 business day | ` templates/Story.md` |
+| **Task** | STK-015 (Dev Lead) | Developer assigned | Team | Same day | ` templates/Task.md` |
+
+### Appendix E: Traceability Mapping for Approval Tables
+
+**Purpose:** This mapping ensures downstream artefacts can reference stakeholder IDs consistently in their approval tables, enabling traceability from requirements through delivery.
+
+**Stakeholder ID Pattern:**
+- **Format:** `STK-XXX` where XXX is a zero-padded 3-digit number (e.g., STK-001, STK-023)
+- **Persistence:** Stakeholder IDs remain constant throughout project lifecycle
+- **Cross-Reference:** All artefact approval tables must use these IDs for consistency
+
+**Usage in Artefact Templates:**
+
+Each SDLC artefact template (BRD, PRD, SRS, NFR, HLD, LLD, Test Plan, Release Notes, Rollback Plan, etc.) includes an **Approvals** table with the following structure:
+
+```markdown
+## Approvals
+
+| Name | Role | Stakeholder ID | Signature | Date |
+|------|------|----------------|-----------|------|
+| TBD | [Role Title] | [STK-XXX] | | |
+| TBD | [Role Title] | [STK-XXX] | | |
+```
+
+**Mapping Instructions for Template Users:**
+
+1. **Identify Required Approvers:** Refer to "Appendix D: Artefact Approval Responsibilities" table above to determine which stakeholders must approve the specific artefact.
+
+2. **Populate Stakeholder ID Column:** Use the exact Stakeholder ID from Section 2.1 "Stakeholder Inventory" (e.g., STK-001 for CLO, STK-012 for Product Owner).
+
+3. **Fill Name and Role:** Once stakeholders are assigned real names (replacing "TBD"), update the Name and Role columns while retaining the Stakeholder ID.
+
+4. **Track in RTM:** The Requirements Traceability Matrix (RTM) will cross-reference these Stakeholder IDs to link requirements → design → test → release approvals.
+
+**Example: BRD Approval Table**
+
+Based on Appendix D, BRD requires approval from STK-012 (Product Owner) with consultation from STK-001, STK-013, STK-014, STK-021.
+
+```markdown
+## Approvals
+
+| Name | Role | Stakeholder ID | Signature | Date |
+|------|------|----------------|-----------|------|
+| TBD | Product Owner | STK-012 | | |
+| TBD | Executive Sponsor (CLO) | STK-001 | | |
+| TBD | Project Manager | STK-013 | | |
+```
+
+**Traceability Benefits:**
+
+- **Audit Trail:** Clear record of who approved what, when, and in what capacity
+- **Consistency:** Same stakeholder referenced uniformly across all artefacts (e.g., STK-014 always = Solution Architect)
+- **Change Impact Analysis:** If stakeholder role changes, update centrally in Stakeholder Register; all artefact references remain valid via ID
+- **RTM Integration:** Enables automated or manual traceability from requirement approval → design approval → test approval → release approval
+- **Governance Reporting:** Facilitates reporting on approval bottlenecks, outstanding approvals, and stakeholder engagement levels
+
+**Portfolio Manager Sign-Off:** This Stakeholder Register, including artefact approval responsibilities and traceability mapping, will be reviewed and approved by the Portfolio Manager (or designated Project Manager STK-013) to ensure governance readiness before Phase 2 (Requirements) commences.
+
+### Appendix F: Glossary
 
 - **Champion:** Stakeholder who actively advocates for the initiative
 - **Hallucination:** AI-generated content that is plausible but factually incorrect
@@ -425,7 +518,11 @@ Thank you for your valuable contribution!
 - [x] Governance bodies, roles, and meeting cadence are established
 - [x] Feedback mechanisms and stakeholder satisfaction metrics are defined
 - [x] Stakeholder-related risks and issues are tracked with mitigation plans
-- [ ] Document has been reviewed and approved by project leadership
+- [x] Artefact approval responsibilities mapped to stakeholders with SLAs (Appendix D)
+- [x] Traceability mapping established for approval tables across SDLC artefacts (Appendix E)
+- [x] Stakeholder ID pattern documented for consistent cross-referencing (STK-XXX format)
+- [ ] Document has been reviewed and approved by Portfolio Manager / Project Manager (STK-013)
+- [ ] Document has been approved by Executive Sponsor (STK-001)
 
 ---
 

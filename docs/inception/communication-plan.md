@@ -1,7 +1,7 @@
 ---
 author: EDUTrack Project Team
 description: Comprehensive communication plan for the EDUTrack Internal AI Learning & Training Platform
-last_changed: 2025-11-19
+last_changed: 2025-11-20
 ---
 
 # Communication Plan: EDUTrack Platform
@@ -12,14 +12,16 @@ last_changed: 2025-11-19
 |---------|------|--------|----------|---------|
 | 0.1 | 2025-11-15 | Change Manager | | Draft |
 | 1.0 | 2025-11-19 | Change Manager | Steering Committee | Baseline |
+| 1.1 | 2025-11-20 | Portfolio Manager | Pending | Enhanced validation checklist; added Portfolio Manager approval with Stakeholder IDs |
 
 ## Approvals
 
-| Name | Role | Signature | Date |
-|------|------|-----------|------|
-| TBD | Executive Sponsor (CLO) | | |
-| TBD | Change Manager | | |
-| TBD | Communications Lead | | |
+| Name | Role | Stakeholder ID | Signature | Date |
+|------|------|----------------|-----------|------|
+| TBD | Portfolio Manager / Project Manager | STK-013 | | |
+| TBD | Executive Sponsor (CLO) | STK-001 | | |
+| TBD | Change Manager | STK-020 | | |
+| TBD | Communications Lead | STK-034 | | |
 
 ## 1. Executive Summary
 
@@ -562,7 +564,10 @@ After incident resolution, send comprehensive post-mortem including:
 - [x] Crisis communication protocol defines severity levels, notification timeline, and SLAs
 - [x] Feedback mechanisms and communication effectiveness metrics are in place
 - [x] All templates, contact information, and tool access are documented in appendices
-- [ ] Communication plan has been reviewed and approved by project leadership and stakeholders
+- [x] Artefacts shared via communication channels are identified (dashboards, reports, release notes, etc.)
+- [x] Escalation paths align with stakeholder decision rights and approval SLAs
+- [ ] Communication plan has been approved by Portfolio Manager / Project Manager (STK-013)
+- [ ] Communication plan has been approved by Executive Sponsor (STK-001) and Change Manager (STK-020)
 
 ---
 

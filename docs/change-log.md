@@ -1,7 +1,7 @@
 ---
 author: EDUTrack Project Team
 description: Change log tracking all significant changes, decisions, and milestones for the EDUTrack platform
-last_changed: 2025-11-19
+last_changed: 2025-11-20
 ---
 
 # Change Log: EDUTrack Platform
@@ -279,6 +279,64 @@ Executive leadership approved the concept for an Internal AI Learning & Training
 
 ---
 
+### [2025-11-20] - Enhancement: Governance Artefact Traceability & Approval Mapping
+
+**Category:** Inception  
+**Impact:** Medium  
+**Affected Stakeholders:** Portfolio Manager (STK-013), All Project Stakeholders, Downstream Phase Teams
+
+**Description:**
+Enhanced governance artefacts (Stakeholder Register, RACI Matrix, Communication Plan) with comprehensive traceability and approval mapping to support downstream SDLC phases without additional clarification.
+
+**Enhancements Made:**
+
+1. **Stakeholder Register (docs/inception/stakeholder-register.md):**
+   - Added **Appendix D: Artefact Approval Responsibilities** - Complete mapping of 30+ SDLC artefacts to accountable stakeholders with approval SLAs
+   - Added **Appendix E: Traceability Mapping for Approval Tables** - Standardized stakeholder ID pattern (STK-XXX) for consistent cross-referencing
+   - Documented usage instructions for template users to populate approval tables
+   - Updated Approvals section to include Portfolio Manager / Project Manager (STK-013) with Stakeholder ID column
+   - Enhanced validation checklist with traceability requirements
+
+2. **RACI Matrix (docs/inception/raci-matrix.md):**
+   - Verified coverage of all mandatory SDLC artefacts from README: BRD, PRD, SRS, NFR, HLD, LLD, Test Plan, Release Notes, Rollback Plan, ADRs, Threat Model, RTM, SBOM
+   - Confirmed each artefact has exactly ONE Accountable role assigned
+   - Updated Approvals section to include Portfolio Manager with Stakeholder ID column
+   - Enhanced validation checklist to confirm artefact coverage
+
+3. **Communication Plan (docs/inception/communication-plan.md):**
+   - Verified communication channels document which artefacts are shared (dashboards, reports, release notes, etc.)
+   - Confirmed escalation paths align with stakeholder decision rights and approval SLAs from Stakeholder Register
+   - Updated Approvals section to include Portfolio Manager with Stakeholder ID column
+   - Enhanced validation checklist with artefact sharing and escalation path alignment
+
+**Rationale:**
+These enhancements ensure:
+- **Traceability:** Clear lineage from stakeholder → approval → artefact → requirement → design → test → release
+- **Consistency:** Standardized Stakeholder ID pattern (STK-XXX) prevents ambiguity across all SDLC artefacts
+- **Self-Service:** Downstream teams (Phase 2-7) can populate approval tables without seeking Portfolio Manager clarification
+- **Governance Readiness:** Complete governance foundation enables Phase 2 (Requirements) to commence immediately upon executive approval
+- **Audit Compliance:** Transparent approval chains support compliance and audit requirements
+
+**Traceability Benefits:**
+- Stakeholder IDs in approval tables enable Requirements Traceability Matrix (RTM) to link: Requirements → Approvers → Design → Test → Release
+- Change impact analysis simplified: if stakeholder role changes, update centrally in Stakeholder Register; all artefact references remain valid via ID
+- Governance reporting automated: identify approval bottlenecks, outstanding approvals, stakeholder engagement levels
+
+**Action Items:**
+- [x] Add Artefact Approval Responsibilities table to Stakeholder Register - Owner: Portfolio Manager - Completed: 2025-11-20
+- [x] Add Traceability Mapping guidance to Stakeholder Register - Owner: Portfolio Manager - Completed: 2025-11-20
+- [x] Update all three governance artefacts with Portfolio Manager approval in document control - Owner: Portfolio Manager - Completed: 2025-11-20
+- [x] Update validation checklists to reflect traceability requirements - Owner: Portfolio Manager - Completed: 2025-11-20
+- [ ] Communicate Stakeholder ID pattern to Phase 2 teams (Product Operations, Systems Analyst, Product Manager) - Owner: Portfolio Manager - Due: 2025-11-25
+- [ ] Train downstream template users on approval table population using Stakeholder IDs - Owner: Portfolio Manager - Due: 2025-12-01
+- [ ] Integrate Stakeholder ID references into Requirements Traceability Matrix (RTM) template - Owner: Business Analyst - Due: 2025-12-05
+
+**Approvals:**
+- Enhanced by: Portfolio Manager Agent on 2025-11-20
+- Pending review by: Project Manager (STK-013), Executive Sponsor (STK-001)
+
+---
+
 ## Upcoming Changes
 
 ### Planned: Executive Committee Approval (Target: 2025-12-10)
@@ -429,6 +487,7 @@ All significant changes to scope, timeline, budget, or approach must follow this
 | Version | Date | Author | Changes | Approved By |
 |---------|------|--------|---------|-------------|
 | 1.0 | 2025-11-19 | Documentation Specialist | Initial creation with inception phase changes | Pending review |
+| 1.1 | 2025-11-20 | Portfolio Manager Agent | Added governance artefact traceability and approval mapping enhancements | Pending review |
 
 ---
 
@@ -439,5 +498,5 @@ All significant changes to scope, timeline, budget, or approach must follow this
 
 ---
 
-**Last Updated:** 2025-11-19  
+**Last Updated:** 2025-11-20  
 **Next Review:** 2025-12-01 (or upon any significant project change)

@@ -1,7 +1,7 @@
 ---
 author: EDUTrack Project Team
 description: RACI matrix defining roles, responsibilities, and accountability for the EDUTrack platform
-last_changed: 2025-11-19
+last_changed: 2025-11-20
 ---
 
 # RACI Matrix: EDUTrack Platform
@@ -12,14 +12,15 @@ last_changed: 2025-11-19
 |---------|------|--------|----------|---------|
 | 0.1 | 2025-11-15 | Project Manager | | Draft |
 | 1.0 | 2025-11-19 | Project Manager | Steering Committee | Baseline |
+| 1.1 | 2025-11-20 | Portfolio Manager | Pending | Enhanced validation checklist; added Portfolio Manager approval with Stakeholder IDs |
 
 ## Approvals
 
-| Name | Role | Signature | Date |
-|------|------|-----------|------|
-| TBD | Executive Sponsor (CLO) | | |
-| TBD | Project Manager | | |
-| TBD | Solution Architect | | |
+| Name | Role | Stakeholder ID | Signature | Date |
+|------|------|----------------|-----------|------|
+| TBD | Portfolio Manager / Project Manager | STK-013 | | |
+| TBD | Executive Sponsor (CLO) | STK-001 | | |
+| TBD | Solution Architect | STK-014 | | |
 
 ## 1. Executive Summary
 
@@ -266,8 +267,11 @@ _To be populated with actual names and contact details during project execution.
 - [x] Escalation matrix includes severity levels, contacts, and SLAs
 - [x] Governance bodies, membership, and meeting cadence are documented
 - [x] RACI maintenance process, review frequency, and ownership are established
+- [x] All mandatory SDLC artefacts covered (BRD, PRD, SRS, NFR, HLD, LLD, Test Plan, Release Notes, Rollback Plan, ADRs, Threat Model, RTM)
+- [x] Each artefact has named Responsible and Accountable parties
 - [ ] All stakeholders have reviewed and acknowledged their roles and responsibilities
-- [ ] Document has been approved by project leadership and executive sponsor
+- [ ] Document has been approved by Portfolio Manager / Project Manager (STK-013)
+- [ ] Document has been approved by Executive Sponsor (STK-001)
 
 ---
 
