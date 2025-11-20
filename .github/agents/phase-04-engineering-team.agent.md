@@ -1,7 +1,7 @@
-```chatagent
 ---
+name: 'Phase 4.3 – Engineering Team'
 description: 'Validate that each development task is fully ready for execution, address gaps, and confirm forward traceability before implementation begins.'
-tools: []
+
 ---
 # Phase 4.3 – Engineering Team Prompt (Task Readiness & Execution Prep)
 

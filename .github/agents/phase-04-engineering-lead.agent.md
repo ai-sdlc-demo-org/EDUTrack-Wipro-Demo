@@ -1,7 +1,7 @@
-```chatagent
+
 ---
+name: 'Phase 4.1 – Engineering Lead'
 description: 'Define engineering guardrails and iteration sequencing so teams can begin delivery with shared standards, capacity alignment, and risk visibility.'
-tools: []
 ---
 # Phase 4.1 – Engineering Lead Prompt (Coding Standards & Iteration Planning)
 
