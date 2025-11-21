@@ -5,7 +5,6 @@ This version uses git credential helper or environment token for authentication.
 """
 
 import os
-import re
 import json
 import subprocess
 import sys
