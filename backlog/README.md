@@ -137,9 +137,11 @@ Issues are tagged with the following labels:
 - `sprint:1-2`: Targeted for Sprint 1-2
 - `release:mvp`: Part of MVP release (Q2 2026)
 
-## Using the Script
+## Creating GitHub Issues
 
-To create GitHub issues from these backlog files:
+There are three ways to create GitHub issues from these backlog files:
+
+### Option 1: GitHub CLI (Recommended)
 
 ```bash
 # Install GitHub CLI (if not installed)
@@ -155,7 +157,23 @@ python3 scripts/create_github_issues.py
 python3 scripts/create_github_issues.py --dry-run
 ```
 
-The script will:
+### Option 2: Direct API (Requires GITHUB_TOKEN)
+
+```bash
+# Set your GitHub token
+export GITHUB_TOKEN=your_personal_access_token
+
+# Run the API script
+python3 scripts/create_issues_via_api.py
+```
+
+### Option 3: Manual Commands
+
+See `ISSUE_CREATION_COMMANDS.md` for ready-to-use `gh issue create` commands that you can copy-paste.
+
+**Note:** The MCP GitHub tools currently only support read operations, so issue creation requires either GitHub CLI authentication or a GitHub API token.
+
+All methods will:
 1. Parse all markdown files in the backlog folder
 2. Extract metadata, relationships, and dependencies
 3. Create GitHub issues in hierarchical order (Epics → Features → Stories → Tasks)

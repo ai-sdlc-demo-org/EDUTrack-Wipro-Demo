@@ -290,28 +290,45 @@ Start → TSK-0002 (5 SP) → Backend API (8 SP) → Testing (5 SP) → Done
 ## 🚀 Next Steps (User Actions)
 
 ### Immediate (Required)
-1. **Authenticate with GitHub CLI:**
-   ```bash
-   gh auth login
-   ```
 
-2. **Create Issues (Choose One):**
-   
-   **Option A - Automated:**
-   ```bash
-   python3 scripts/create_github_issues.py
-   ```
-   
-   **Option B - Manual:**
-   ```bash
-   # Follow commands in ISSUE_CREATION_COMMANDS.md
-   ```
+**Choose one of three methods to create GitHub issues:**
 
-3. **Verify:**
-   ```bash
-   gh issue list --repo siddjoshi/EDUTrack-Demo
-   cat backlog/issue-mapping.json
-   ```
+#### Method 1: GitHub CLI (Recommended - Most User-Friendly)
+```bash
+# 1. Authenticate
+gh auth login
+
+# 2. Create issues
+python3 scripts/create_github_issues.py
+
+# 3. Verify
+gh issue list --repo siddjoshi/EDUTrack-Demo
+cat backlog/issue-mapping.json
+```
+
+#### Method 2: Direct API (Programmatic - Requires Token)
+```bash
+# 1. Get a personal access token from:
+#    https://github.com/settings/tokens
+#    Required scopes: repo or public_repo
+
+# 2. Set the token
+export GITHUB_TOKEN=ghp_your_token_here
+
+# 3. Create issues
+python3 scripts/create_issues_via_api.py
+
+# 4. Verify
+cat backlog/issue-mapping.json
+```
+
+#### Method 3: Manual (Step-by-Step Control)
+```bash
+# Follow the 6 ready-to-use commands in:
+open ISSUE_CREATION_COMMANDS.md
+```
+
+**Note:** The GitHub MCP server tools only support read operations, so issue creation requires GitHub authentication via one of the methods above.
 
 ### Post-Creation (Recommended)
 4. **Start Sprint Planning:**
