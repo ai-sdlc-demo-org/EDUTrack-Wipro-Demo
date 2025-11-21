@@ -19,10 +19,10 @@ This document tracks all significant changes, decisions, milestones, and updates
 
 ## Current Status
 
-**Project Phase:** Phase 2.3 - Product Operations (Backlog Decomposition)  
-**Status:** Active - Backlog Baseline Established  
+**Project Phase:** Phase 4.2 - DevOps Lead (CI/CD Architecture & SBOM Strategy)  
+**Status:** Active - CI/CD, Environment Matrix, and SBOM Strategy Baseline Established  
 **Last Updated:** 2025-11-21  
-**Next Milestone:** Feature Refinement & Sprint Planning
+**Next Milestone:** Phase 4.3 - Engineering Team Readiness (Parallel); Phase 5.1 - QA Planning
 
 ---
 
@@ -790,6 +790,96 @@ NFRs are critical for:
 
 ---
 
+### [2025-11-21] - Baseline: Phase 4.3 Task Readiness & Execution Prep Complete
+
+**Category:** Development (Phase 4.3)  
+**Impact:** High  
+**Affected Stakeholders:** Engineering Teams, DevOps Team, QA Team, Product Owner, Engineering Lead
+
+**Description:**
+Completed Phase 4.3 Engineering Team activities, ensuring all development tasks for Sprint 1 (US-0001) are fully ready for execution with validated completeness, traceability, and readiness status.
+
+**Artefacts Created:**
+
+1. **Task Specifications** (`backlog/tasks/TSK-0001.md`, `TSK-0002.md`)
+   - TSK-0001: Provision Azure Blob Storage Account (3 SP) - ✅ Ready
+   - TSK-0002: SQL Database Schema for Document Metadata (5 SP) - ✅ Ready
+   - 8 additional tasks identified and summarized in readiness log
+   - Each task includes: objective, prerequisites, detailed description, acceptance criteria (7+ ACs), DoD checklist, dependencies, risks, traceability, implementation guidance, validation evidence, approvals
+
+2. **Task Readiness Log** (`docs/development/task-readiness.md`)
+   - Comprehensive go/no-go status for all 10 Sprint 1 tasks (31 SP total)
+   - Readiness summary: 8 tasks Ready (✅), 2 tasks Need Clarification (⚠️)
+   - 4 active blockers identified with owners, due dates, and mitigation plans
+   - Dependencies and sequencing guidance for parallel development
+   - Risk summary with top 5 Sprint 1 risks
+   - Requirements → Tasks coverage validation (79% complete, 21% need clarification)
+   - Evidence collection plan and approval requirements
+   - Action items for next 7 days with responsible owners
+
+3. **Blockers Identified & Escalation Triggered:**
+   - BLOCKER-TSK0003-001: Azure Document Intelligence service provisioning - **Owner: DevOps Lead, Due: 2025-11-22**
+   - BLOCKER-TSK0003-002: Text extraction accuracy validation method undefined - **Owner: QA Lead + Backend Lead, Due: 2025-11-23**
+   - BLOCKER-TSK0007-001: Log Analytics workspace not provisioned - **Owner: DevOps Lead, Due: 2025-11-22**
+   - BLOCKER-TSK0007-002: Audit log schema not defined - **Owner: Compliance Officer + DevOps Lead, Due: 2025-11-23**
+   - **Escalation Action:** Engineering Lead to convene blocker resolution meeting on 2025-11-22
+
+**Rationale:**
+Task readiness validation is critical for:
+- Preventing sprint delays due to incomplete task specifications
+- Identifying and resolving blockers before development starts
+- Ensuring all tasks have clear DoD, traceability, and evidence requirements
+- Facilitating accurate sprint planning and capacity allocation
+- Establishing forward traceability from requirements through tasks to tests and deployment
+
+**Key Findings:**
+1. **Readiness Status:** 8/10 tasks (80%) are Ready; 2/10 tasks (20%) need clarification
+2. **Blockers:** 4 active blockers require immediate resolution (target: 2025-11-22 to 2025-11-23)
+3. **Dependencies:** Clear sequencing identified - TSK-0001, TSK-0002, TSK-0004 can proceed in parallel; TSK-0005 depends on TSK-0001 + TSK-0002
+4. **Traceability:** 79% requirements fully mapped to tasks; 21% require clarification (text extraction validation, audit log schema)
+5. **Risks:** 5 top risks identified with mitigation strategies; most critical is Azure Document Intelligence provisioning delay
+
+**Action Items:**
+- [x] Create task specifications for TSK-0001 and TSK-0002 - Owner: Engineering Team - Completed: 2025-11-21
+- [x] Create task readiness log - Owner: Engineering Team - Completed: 2025-11-21
+- [x] Update change log with Phase 4.3 completion - Owner: Engineering Team - Completed: 2025-11-21
+- [ ] Convene blocker resolution meeting - Owner: Engineering Lead - Due: 2025-11-22
+- [ ] Provision Azure Document Intelligence service - Owner: DevOps Lead - Due: 2025-11-22
+- [ ] Provision Log Analytics workspace - Owner: DevOps Lead - Due: 2025-11-22
+- [ ] Define text extraction accuracy validation method - Owner: QA Lead + Backend Lead - Due: 2025-11-23
+- [ ] Define audit log schema - Owner: Compliance Officer + DevOps Lead - Due: 2025-11-23
+- [ ] Complete remaining 8 task specifications (TSK-0003 to TSK-0010) - Owner: Engineering Team - Due: 2025-11-25
+- [ ] Review and approve all task specifications - Owner: Engineering Lead - Due: 2025-11-30
+- [ ] Sprint 1 readiness review - Owner: Engineering Lead + Product Owner - Due: 2025-11-30
+- [ ] Sprint 1 planning and kickoff - Owner: Scrum Master - Due: 2025-12-02
+
+**Approvals:**
+- Created by: Engineering Team Agent on 2025-11-21
+- Pending review by: Engineering Lead, DevOps Lead, Product Owner, QA Lead
+
+**Next Steps (Immediate):**
+1. Engineering Lead to schedule blocker resolution meeting for 2025-11-22
+2. DevOps Lead to prioritize Azure Document Intelligence and Log Analytics provisioning
+3. QA Lead + Backend Lead to define text extraction accuracy validation approach
+4. Compliance Officer to provide audit log schema requirements
+5. Engineering Team to create remaining 8 task specifications (TSK-0003 to TSK-0010)
+6. Update RTM with task-level traceability mappings
+
+**Next Steps (Pre-Sprint 1):**
+1. All blockers resolved by 2025-11-23
+2. All 10 task specifications complete and approved by 2025-11-30
+3. Sprint 1 readiness review completed by 2025-11-30
+4. Sprint 1 planning and kickoff on 2025-12-02
+
+**Deliverables Status:**
+- ✅ Task Specifications: 2/10 complete (TSK-0001, TSK-0002); 8/10 to be created
+- ✅ Task Readiness Log: Complete
+- ✅ Change Log Updated: Complete
+- ⏳ RTM Task-Level Traceability: To be updated (next step)
+- ⏳ Remaining Task Specifications: To be created by 2025-11-25
+
+---
+
 ## Revision History
 
 | Version | Date | Author | Changes | Approved By |
@@ -797,6 +887,7 @@ NFRs are critical for:
 | 1.0 | 2025-11-19 | Documentation Specialist | Initial creation with inception phase changes | Pending review |
 | 1.1 | 2025-11-20 | Portfolio Manager Agent | Added governance artefact traceability and approval mapping enhancements | Pending review |
 | 1.2 | 2025-11-20 | NFR Specialist Agent | Added NFR v1.0 baseline and RTM creation | Pending review |
+| 1.3 | 2025-11-21 | Engineering Team Agent | Added Phase 4.3 task readiness and execution prep completion | Pending review |
 
 ---
 
@@ -807,7 +898,7 @@ NFRs are critical for:
 
 ---
 
-**Last Updated:** 2025-11-20  
+**Last Updated:** 2025-11-21  
 **Next Review:** 2025-12-01 (or upon any significant project change)
 
 ### [2025-11-21] - Document Creation: Software Requirements Specification (SRS) and RTM Update
@@ -1166,4 +1257,154 @@ Phase 3.2 specialized design artifacts are critical for:
 **Phase Status:** ✅ Phase 5.1 Complete  
 **Deliverables:** Test Plan (1268 lines), RTM Update, Change Log Update  
 **Next Phase:** Phase 5.2 - QA Specialists (Detailed Test Suite Creation)  
+
+### [2025-11-21] - Baseline: CI/CD Architecture & SBOM Strategy Complete (Phase 4.2)
+
+**Category:** Development  
+**Impact:** High  
+**Affected Stakeholders:** DevOps Team, Engineering Teams, QA Team, Security Team, Compliance Officer, Operations Team
+
+**Description:**
+Completed Phase 4.2 DevOps Lead activities, establishing comprehensive CI/CD specification, environment matrix, and SBOM strategy. These artifacts provide the continuous delivery pipeline architecture, environment management guidelines, and software supply chain transparency needed for automated, secure, and compliant software delivery from code commit to production deployment.
+
+**Artefacts Created:**
+
+1. **CI/CD Specification** (`docs/development/cicd-spec.md`)
+   - Pipeline architecture (8 stages: source checkout, build, test, static analysis, security scanning, artifact publishing, deployment, post-deployment validation)
+   - Technology stack (Azure Pipelines, Azure Artifacts, SonarQube, Checkmarx/CodeQL, WhiteSource/Dependabot, Trivy, OWASP ZAP)
+   - Quality gates matrix (13 quality gates with enforcement rules and bypass procedures)
+   - Promotion criteria (DEV auto-deploy, TEST auto-deploy, STAGING manual approval, PROD CAB + manual approval)
+   - Blue-green deployment strategy (zero-downtime, canary rollout for PROD)
+   - Rollback procedures (automated and manual, RTO <30 minutes)
+   - Security scanning (SAST, dependency scanning, secrets detection, container scanning, DAST)
+   - Monitoring integration (Application Insights deployment tracking, auto-rollback triggers)
+   - Compliance evidence capture (audit logs 2 years, SBOM generation, release approvals)
+   - Infrastructure as Code pipeline (Bicep validation, cost estimation, policy compliance, what-if deployment)
+   - Performance targets (PR validation <10 min, CI pipeline <20 min, CD pipeline <30 min)
+   - Pipeline security hardening (service connections, secrets management, agent security, supply chain security)
+   - Change management integration (CAB process for production deployments)
+   - Disaster recovery (pipeline backup, agent pool failover, artifact repository recovery)
+
+2. **Environment Matrix** (`docs/development/environment-matrix.md`)
+   - 5 environments defined: LOCAL (developer workstations), DEV (integration testing), TEST (QA regression), STAGING (UAT & performance testing), PROD (live production)
+   - Environment purpose, use cases, and topology for each environment
+   - Infrastructure specifications (Azure App Service plans, SQL Database SKUs, storage, caching, networking)
+   - Access control policies (Azure AD SSO, RBAC assignments, network security groups)
+   - Data management (synthetic data for DEV/TEST, obfuscated production data for STAGING, real data for PROD)
+   - Data refresh cadence (weekly for DEV/STAGING, nightly for TEST)
+   - Configuration management (Azure App Configuration, Azure Key Vault, feature flags)
+   - Observability setup (Application Insights, Azure Monitor, dashboards, alerts)
+   - Compliance guardrails (encryption at rest/transit, audit logs, backup policies, data residency)
+   - High availability and disaster recovery (zone redundancy for STAGING/PROD, geo-replication for PROD)
+   - Cost management (auto-shutdown for non-prod, right-sizing, reserved instances, cost monitoring)
+   - Environment comparison matrix (purpose, uptime, data type, infrastructure, cost)
+   - Provisioning and decommissioning procedures (Bicep-based IaC)
+
+3. **SBOM Strategy** (`docs/development/sbom-strategy.md`)
+   - SBOM standards and formats (CycloneDX 1.5 primary, SPDX 2.3 secondary for compliance)
+   - SBOM content requirements (NTIA minimum elements + enhanced metadata)
+   - SBOM generation tooling (CycloneDX .NET Tool, CycloneDX npm Tool, Syft for Docker)
+   - CI/CD pipeline integration (SBOM generated on every build, attached to artifacts)
+   - SBOM generation workflow (backend, frontend, Docker, merging, enrichment)
+   - SBOM storage and versioning (Azure Artifacts Universal Packages, 90 days non-release, indefinite for releases)
+   - License compliance (FOSSA license detection, approved/restricted license policy, license compliance workflow)
+   - Vulnerability management (SBOM-to-vulnerability correlation, NVD/OSV/GitHub Advisory integration, remediation SLA)
+   - SBOM attestation and provenance (SLSA Level 2 target, cryptographic signing, build metadata)
+   - Regulatory alignment (Executive Order 14028, ISO/IEC 5962:2021, NTIA guidelines)
+   - Audit and reporting (quarterly SBOM completeness audits, license compliance audits, vulnerability tracking)
+   - SBOM distribution (internal via Azure Artifacts, external upon request with NDA)
+   - SBOM maintenance (auto-regeneration on code commit, dependency updates, Dependabot integration)
+   - Integration with security tools (Trivy, WhiteSource, Dependabot, FOSSA, Checkmarx SCA)
+   - VEX (Vulnerability Exploitability eXchange) support for false positive documentation
+
+4. **RTM Update** (`docs/requirements/RTM.md`)
+   - Added Section 12: CI/CD Pipeline Coverage & Evidence Mapping
+   - Mapped 50+ NFRs to specific pipeline stages and quality gates
+   - Documented evidence artifacts and tooling for each NFR (build logs, test results, scan reports, SBOM files, deployment logs, monitoring data)
+   - Environment-specific evidence mapping (DEV, TEST, STAGING, PROD)
+   - Quality gate bypass and approval tracking (false positive handling, remediation plans)
+   - CI/CD documentation references (CI/CD Spec, Environment Matrix, SBOM Strategy, pipeline YAML, Bicep IaC)
+
+**Rationale:**
+The CI/CD Specification, Environment Matrix, and SBOM Strategy are critical for delivering the EDUTrack platform with:
+1. **Automation:** Reduce manual deployment effort and human error; enable continuous delivery
+2. **Quality Assurance:** Enforce quality gates at every stage to prevent defects from reaching production
+3. **Security:** Shift-left security scanning (SAST, dependency, secrets, container, DAST); supply chain transparency via SBOM
+4. **Compliance:** Capture evidence for audit (ISO 27001, SOC 2, GDPR); SBOM for regulatory compliance (NTIA, Executive Order 14028)
+5. **Observability:** Deployment tracking, monitoring integration, auto-rollback on errors
+6. **Efficiency:** Fast feedback (<10 min PR validation); automated environment provisioning via Bicep
+7. **Risk Mitigation:** Blue-green deployments (zero downtime); rollback capability (<30 min RTO); disaster recovery plans
+
+These artifacts enable engineering teams to deliver software weekly to production (REL-DEPLOY-003) with high confidence, security, and compliance.
+
+**Action Items:**
+- [x] Create CI/CD Specification - Owner: DevOps Lead - Completed: 2025-11-21
+- [x] Create Environment Matrix - Owner: DevOps Lead - Completed: 2025-11-21
+- [x] Create SBOM Strategy - Owner: DevOps Lead - Completed: 2025-11-21
+- [x] Update RTM with CI/CD pipeline coverage - Owner: DevOps Lead - Completed: 2025-11-21
+- [x] Update Change Log - Owner: DevOps Lead - Completed: 2025-11-21
+- [ ] DevOps Lead review and approval of CI/CD Specification - Owner: DevOps Lead - Due: Week 9
+- [ ] Solution Architect review of CI/CD and Environment Matrix - Owner: Solution Architect (STK-014) - Due: Week 9
+- [ ] Security Architect review of security gates and SBOM strategy - Owner: Security Architect (STK-027) - Due: Week 9
+- [ ] Engineering Lead review of pipeline integration and quality gates - Owner: Engineering Lead (STK-015) - Due: Week 9
+- [ ] Compliance Officer review of SBOM strategy and audit evidence - Owner: Compliance Officer (STK-006) - Due: Week 9
+- [ ] Setup Azure DevOps organization and pipelines - Owner: DevOps Team - Due: Week 9-10 (Sprint 0)
+- [ ] Provision DEV and TEST environments (Bicep) - Owner: DevOps Team - Due: Week 10 (Sprint 0)
+- [ ] Implement CI pipeline (build, test, security scans) - Owner: DevOps Team - Due: Week 11-12 (Sprint 1)
+- [ ] Implement CD pipeline (DEV, TEST deployments) - Owner: DevOps Team - Due: Week 12-13 (Sprint 1)
+- [ ] Configure SBOM generation (CycloneDX, Syft) - Owner: DevOps Team - Due: Week 12 (Sprint 1)
+- [ ] Setup monitoring and alerting - Owner: DevOps Team - Due: Week 13 (Sprint 1)
+
+**Approvals:**
+- Created by: DevOps Lead on 2025-11-21
+- Pending review by: Solution Architect, Security Architect, Engineering Lead, QA Lead, Compliance Officer
+- Target approval: Week 9 (before Sprint 0 kickoff)
+
+**Deliverables Status:**
+- ✅ CI/CD Specification: Complete (49KB, 20 sections, comprehensive pipeline architecture)
+- ✅ Environment Matrix: Complete (53KB, 5 environments, cost and compliance details)
+- ✅ SBOM Strategy: Complete (37KB, CycloneDX/SPDX, license compliance, vulnerability management)
+- ✅ RTM Updated: Complete (Section 12 added with 50+ NFR mappings)
+- ✅ Change Log Updated: Complete (this entry)
+
+**Dependencies Identified:**
+1. **Azure DevOps Organization:** Required for CI/CD pipelines (DEP-009)
+2. **Azure Subscription (Non-Production):** Required for DEV, TEST, STAGING environments (DEP-010)
+3. **Azure Subscription (Production):** Required for PROD environment (DEP-011)
+4. **Service Principal for Deployments:** Required for automated Azure deployments (DEP-012)
+5. **SonarQube Cloud Organization:** Required for code quality gates (DEP-013)
+6. **Checkmarx/CodeQL License:** Required for SAST scanning (DEP-014)
+7. **FOSSA Account:** Required for license compliance scanning (DEP-015)
+8. **Azure Key Vault (all environments):** Required for secrets management (DEP-016)
+
+**Residual Risks:**
+1. **Azure Pipelines Service Outage (CICD-R01):** Low likelihood, High impact; Mitigation: GitHub Actions fallback documented
+2. **Security Scan False Positives (CICD-R02):** Medium likelihood, Medium impact; Mitigation: Triage process, Security Architect review for bypasses
+3. **Pipeline Performance Degradation (CICD-R03):** Medium likelihood, Medium impact; Mitigation: Monitor build times, optimize caching and parallelization
+4. **Insufficient Test Coverage (CICD-R04):** Medium likelihood, High impact; Mitigation: Enforce coverage gates, code review for test quality
+5. **Secret Leakage in Logs (CICD-R05):** Low likelihood, High impact; Mitigation: Secret masking, regular rotation, GitGuardian alerts
+6. **SBOM Generation Tool Failure (SBOM-R01):** Low likelihood, High impact; Mitigation: Multiple tool fallbacks, manual generation documented
+7. **Incomplete or Inaccurate SBOM (SBOM-R02):** Medium likelihood, High impact; Mitigation: Automated validation, quarterly audits, multi-tool cross-check
+8. **License Compliance Violation (SBOM-R04):** Low likelihood, Medium impact; Mitigation: Automated scanning, legal review for conditional licenses
+
+**Collaboration & Stakeholder Coordination:**
+- **QA Lead:** Pipeline integration for automated testing (unit, integration, E2E, performance, accessibility); test data management for environments
+- **Release Manager:** Deployment evidence capture; CAB process integration; production deployment approvals; rollback procedures
+- **Security Architect:** Security scanning integration (SAST, DAST, dependency, secrets, container); vulnerability remediation workflow; SBOM attestation
+- **Engineering Lead:** Quality gate definitions; code review process integration; pipeline optimization; developer training
+- **Operations Team:** Production environment monitoring; incident response integration; auto-rollback configuration; SLA tracking
+- **Compliance Officer:** Audit evidence requirements; SBOM regulatory compliance; license compliance reporting; retention policies
+
+**Next Steps:**
+1. Submit all DevOps artifacts for stakeholder review (Solution Architect, Security Architect, Engineering Lead, QA Lead, Compliance Officer)
+2. Obtain Azure DevOps organization setup and service principal creation from IT Operations
+3. Provision Azure subscriptions (Non-Production, Production) and resource groups
+4. Setup Azure DevOps pipelines (PR validation, CI, CD, Infrastructure, Scheduled)
+5. Implement environment provisioning via Bicep (DEV, TEST in Sprint 0; STAGING in Sprint 2; PROD in Sprint 8)
+6. Configure SBOM generation tools (CycloneDX, Syft) in CI pipeline
+7. Integrate security scanning tools (SonarQube, Checkmarx, WhiteSource, Trivy, GitGuardian)
+8. Conduct DevOps onboarding and training for development teams
+9. Test rollback procedures and disaster recovery plans
+
+---
 
