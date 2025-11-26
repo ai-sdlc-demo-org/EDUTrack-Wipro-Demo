@@ -56,6 +56,125 @@ Each entry follows this structure:
 
 ## 2025 Changes
 
+### [2025-11-26] - Baseline: High-Level Design (HLD) Complete (Phase 3.1)
+
+**Category:** Design  
+**Impact:** High  
+**Affected Stakeholders:** Solution Architect, Engineering Teams, DevOps Team, QA Team, Security Architect, Product Owner
+
+**Description:**
+Completed comprehensive High-Level Design (HLD) for the EDUTrack platform, providing the architecture blueprint that will guide detailed design (LLD), implementation, and deployment activities. The HLD includes extensive Mermaid diagrams for visual documentation.
+
+**Artefacts Created:**
+
+1. **High-Level Design** (`docs/design/HLD.md`)
+   - Document control and approval table with stakeholder IDs
+   - Executive summary with purpose, scope, and document references
+   - Architectural drivers (business context, key constraints, assumptions, quality attribute priorities)
+   - Architecture overview with system context diagram (Mermaid C4-style)
+   - Solution architecture diagram with all layers (Mermaid flowchart)
+   - Technology stack summary (React 18, TypeScript 5, Python 3.11+, FastAPI, Azure services)
+   - Logical view with component responsibilities (Mermaid flowchart)
+   - Deployment view with infrastructure sizing (Mermaid flowchart)
+   - Integration view with sequence diagrams (Mermaid sequence)
+   - Data flow view (Mermaid flowchart)
+   - Component catalogue with class diagram (Mermaid classDiagram)
+   - Core services (Auth, Content, Learning, Analytics, Search, AI Generation)
+   - Frontend component architecture (Mermaid flowchart)
+   - Data design summary with ER diagram (Mermaid erDiagram)
+   - Data store allocation table
+   - Integration architecture with API specifications summary
+   - Content ingestion sequence diagram (Mermaid sequence)
+   - Security architecture (Mermaid flowchart)
+   - Authentication & authorization sequence diagram (Mermaid sequence)
+   - Security controls matrix aligned with STRIDE threat model
+   - Performance architecture (Mermaid flowchart)
+   - Performance targets table with NFR references
+   - Scalability design with auto-scale rules (Mermaid flowchart)
+   - Operational considerations (monitoring, observability, DR)
+   - Deployment model with environment strategy (Mermaid flowchart)
+   - CI/CD pipeline overview (Mermaid flowchart)
+   - 7 Architecture Decision Records (ADRs)
+   - Governance & traceability sections
+   - LLD planning table with component owners and status
+   - Quality checklist (all items completed)
+
+2. **RTM Update** (`docs/requirements/RTM.md`)
+   - Added Section 16: High-Level Design (HLD) Traceability
+   - HLD section to requirements mapping table
+   - HLD to backlog feature traceability (all 24 features mapped)
+   - ADR summary with NFR impact
+   - LLD planning status table
+   - Updated document control version to 1.4
+
+**Mermaid Diagrams Included:**
+- System context diagram (graph TB)
+- Solution architecture overview (flowchart TB)
+- Quality attribute priority pie chart (pie)
+- Logical view (flowchart LR)
+- Deployment view (flowchart TB)
+- Integration sequence diagram (sequenceDiagram)
+- Data flow view (flowchart TB)
+- Component class diagram (classDiagram)
+- Frontend components (flowchart TB)
+- Entity relationship diagram (erDiagram)
+- Integration overview (flowchart LR)
+- Content ingestion sequence (sequenceDiagram)
+- Security architecture (flowchart TB)
+- Authentication sequence (sequenceDiagram)
+- Performance architecture (flowchart TB)
+- Scalability design (flowchart LR)
+- Monitoring & observability (flowchart TB)
+- Environment strategy (flowchart LR)
+- CI/CD pipeline (flowchart TB)
+
+**Traceability Established:**
+- 100% BRD objectives (12/12) mapped to HLD sections
+- 100% PRD features (24/24) mapped to HLD components
+- 100% SRS functional requirements traced to component catalogue
+- 100% NFRs (121) mapped to relevant HLD sections
+- All backlog features (EP-0001, FE-0001 to FE-0024) mapped to HLD components
+
+**Key Decisions:**
+1. **Azure PaaS-First:** App Service, SQL Database, Blob Storage over IaaS
+2. **Python/FastAPI Backend:** High performance, OpenAPI docs, Azure SDK support
+3. **React/TypeScript Frontend:** Industry standard, type safety, large ecosystem
+4. **Azure OpenAI GPT-4:** Enterprise-grade, Azure compliance, data residency
+5. **Cosmos DB for Audit Logs:** Auto-scaling, 7-year retention capability
+6. **Azure AI Search:** Keyword + semantic search, managed service
+7. **Azure AD for Auth:** Enterprise identity, MFA, Conditional Access
+
+**Action Items:**
+- [x] Create comprehensive HLD document with Mermaid diagrams - Owner: Solution Architect - Completed: 2025-11-26
+- [x] Update RTM with HLD traceability mapping - Owner: Solution Architect - Completed: 2025-11-26
+- [x] Update Change Log with HLD baseline - Owner: Solution Architect - Completed: 2025-11-26
+- [ ] Solution Architect review and approval of HLD - Owner: CTO - Due: Week 9
+- [ ] Security Architect review of security sections - Owner: Security Architect - Due: Week 9
+- [ ] Engineering Lead review of component catalogue - Owner: Engineering Lead - Due: Week 9
+- [ ] Begin LLD development for critical components - Owner: Development Leads - Due: Week 9-10
+- [ ] Schedule architecture review with Steering Committee - Owner: Solution Architect - Due: Week 9
+
+**Approvals:**
+- Created by: Solution Architect on 2025-11-26
+- Pending review by: CTO, Security Architect, Engineering Lead, Product Owner
+- Target approval: Week 9 (before LLD development)
+
+**Deliverables Status:**
+- ✅ HLD: Complete (1,307 lines, 47KB, 19 Mermaid diagrams)
+- ✅ RTM Updated: Complete (Section 16 added with HLD traceability)
+- ✅ Change Log Updated: Complete (this entry)
+- ⏳ LLD Documents: Pending (6 components planned)
+
+**Next Steps:**
+1. Submit HLD for stakeholder review (CTO, Security Architect, Engineering Lead)
+2. Conduct architecture walkthrough with development teams
+3. Begin LLD development for Authentication, Content, and AI Generation services
+4. Update threat model with HLD component references
+5. Finalize data architecture ER diagrams based on HLD data design
+6. Schedule architecture review board session
+
+---
+
 ### [2025-11-21] - Baseline: Engineering Standards & Iteration Planning Complete (Phase 4.1)
 
 **Category:** Development  

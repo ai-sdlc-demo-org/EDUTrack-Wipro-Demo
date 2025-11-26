@@ -964,10 +964,89 @@ All risks have documented mitigation plans and assigned owners.
 | 1.1 | 2025-11-21 | Security Architect | Added Phase 3.2 design artifacts traceability | Pending |
 | 1.2 | 2025-11-21 | Engineering Lead | Added Phase 4.1 implementation ownership and quality gates | Pending |
 | 1.3 | 2025-11-21 | QA/Test Lead | Added Phase 5.1 Test Plan baseline and test coverage | Pending |
+| 1.4 | 2025-11-26 | Solution Architect | Added HLD baseline with architecture traceability | Pending |
 
 ---
 
-**RTM Status:** ✅ Updated with Test Plan Coverage  
-**Last Updated:** 2025-11-21  
-**Next Review:** After Test Case Design (Sprint 3)
-**Next Review:** After Sprint 1 (pipeline implementation and quality gate validation)
+## 16. High-Level Design (HLD) Traceability
+
+### 16.1 HLD Document Reference
+
+The High-Level Design (HLD) document (`docs/design/HLD.md`) provides the comprehensive architecture blueprint for EDUTrack, including system context, component design, integration patterns, security controls, and deployment strategy.
+
+**HLD Baseline Date:** 2025-11-26  
+**HLD Version:** 1.0
+
+### 16.2 HLD Section to Requirements Mapping
+
+| HLD Section | Description | Requirements Coverage | NFR Coverage |
+|-------------|-------------|----------------------|--------------|
+| Section 2: Architectural Drivers | Business context, constraints, assumptions | BRD-OBJ-01 to BRD-OBJ-12 | All quality attributes |
+| Section 3: Architecture Overview | System context, solution architecture, technology stack | All PRD features | All NFRs |
+| Section 4: Architecture Views | Logical, deployment, integration views | SRS-FUNC-* | PERF-*, AVAIL-*, SEC-* |
+| Section 5: Component Catalogue | Core services, frontend components | All 24 PRD features | MAINT-* |
+| Section 6: Data Design | Data architecture overview, store allocation | SRS Section 5 | SEC-DATA-*, COMP-* |
+| Section 7: Integration Architecture | External integrations, API specifications | SRS-FUNC-001-015 (Ingestion), IN-12.* | PERF-LAT-*, SEC-APP-* |
+| Section 8: Security Architecture | Authentication, authorization, controls | SEC-* (30 NFRs) | Full coverage |
+| Section 9: Performance & Scalability | Performance targets, scalability design | PERF-* (23 NFRs) | Full coverage |
+| Section 10: Operational Considerations | Monitoring, observability, DR | OBS-* (10 NFRs), DR-* (10 NFRs) | Full coverage |
+| Section 11: Deployment Model | Environment strategy, CI/CD | REL-* | MAINT-*, AVAIL-* |
+| Section 12: ADRs | Architecture decisions | Key technology choices | All related NFRs |
+
+### 16.3 HLD to Backlog Feature Traceability
+
+| Backlog Feature | HLD Component | HLD Section Reference |
+|-----------------|---------------|----------------------|
+| FE-0001: Content Ingestion | Ingestion Service | 5.2, 7.1, 7.3 |
+| FE-0002: AI Content Generation | AI Generation Service | 5.1, 5.2, 7.3 |
+| FE-0003: Content Review Workflow | Content Service | 5.1, 5.2 |
+| FE-0004: Content Repository | Content Service, Data Layer | 5.2, 6.1, 6.2 |
+| FE-0005: Personalized Learning Paths | Learning Service | 5.1, 5.2 |
+| FE-0006: Skill Profiles | Learning Service | 5.1, 5.2 |
+| FE-0007: Microsoft Learn Integration | MS Learn Connector | 5.2, 7.1, 7.2 |
+| FE-0008: Learning Path Assignment | Learning Service | 5.1, 5.2 |
+| FE-0009: Course Player | Frontend - Learner Features | 5.3 |
+| FE-0010: Interactive Assessments | Assessment Engine | 5.3 |
+| FE-0011: Progress Tracking | Learning Service | 5.1, 5.2 |
+| FE-0012: Semantic Search | Search Service | 5.1, 5.2 |
+| FE-0013: Recommendation Engine | AI Engine | 5.2 |
+| FE-0014: Learner Dashboard | Frontend - Learner Features | 5.3 |
+| FE-0015: Manager Dashboard | Frontend - Manager Features | 5.3 |
+| FE-0016: L&D Admin Dashboard | Frontend - Admin Features | 5.3 |
+| FE-0017: Executive Dashboard | Analytics Service | 5.1, 5.2 |
+| FE-0018: User & Role Management | Authentication Service | 5.1, 5.2, 8.2 |
+| FE-0019: Skill Taxonomy Management | Content Service | 5.2 |
+| FE-0020: Integration Management | Integration Services | 5.2, 7.1 |
+| FE-0021: Audit Logging | Audit Service | 5.2, 8.1 |
+| FE-0022: Hallucination Detection | AI Generation Service | 5.1, 5.2 |
+| FE-0023: PII Protection | PII Detection Filter | 5.2, 8.1 |
+| FE-0024: Content Quality Workflow | Content Service | 5.2 |
+
+### 16.4 Architecture Decision Records (ADR) Summary
+
+| ADR ID | Decision | Rationale | NFR Impact |
+|--------|----------|-----------|------------|
+| ADR-001 | Azure PaaS-First Architecture | Reduced ops overhead, built-in HA, managed security | MAINT-004, AVAIL-001 |
+| ADR-002 | Python/FastAPI for Backend | High performance, OpenAPI docs, Azure SDK support | PERF-LAT-*, MAINT-003 |
+| ADR-003 | React with TypeScript for Frontend | Industry standard, type safety, large ecosystem | MAINT-001, ACCESS-001 |
+| ADR-004 | Azure OpenAI for Content Generation | Enterprise-grade, Azure compliance, data residency | SEC-AI-*, PERF-LAT-005 |
+| ADR-005 | Cosmos DB for Audit Logs | Auto-scaling, 7-year retention, point-in-time recovery | COMP-003, OBS-009 |
+| ADR-006 | Azure AI Search for Semantic Search | Keyword + semantic search, managed service | PERF-LAT-003, SRS-FUNC-141-145 |
+| ADR-007 | Azure AD for Authentication | Enterprise identity, MFA, Conditional Access | SEC-IAM-001 to SEC-IAM-006 |
+
+### 16.5 LLD Planning Status
+
+| Component | LLD Document | Owner | Status | Target Date |
+|-----------|--------------|-------|--------|-------------|
+| Authentication Service | `docs/design/LLD/authentication.md` | Backend Lead | ⏸️ Pending | Week 9 |
+| Content Service | `docs/design/LLD/content-service.md` | Backend Lead | ⏸️ Pending | Week 9 |
+| AI Generation Service | `docs/design/LLD/ai-generation.md` | Backend Lead | ⏸️ Pending | Week 9 |
+| Learning Service | `docs/design/LLD/learning-service.md` | Backend Lead | ⏸️ Pending | Week 10 |
+| Frontend Application | `docs/design/LLD/frontend.md` | Frontend Lead | ⏸️ Pending | Week 10 |
+| Infrastructure | `docs/design/LLD/infrastructure.md` | DevOps Lead | ⏸️ Pending | Week 9 |
+
+---
+
+**RTM Status:** ✅ Updated with HLD Traceability  
+**Last Updated:** 2025-11-26  
+**Next Review:** After LLD development (Week 10)
